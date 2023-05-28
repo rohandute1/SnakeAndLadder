@@ -18,18 +18,37 @@ namespace SnakeAndLadderGame
 
             while (position < 100)
             {
-   
-                int diceValue = random.Next(1, 7); 
+               
+                int diceValue = random.Next(1, 7);
                 diceRolls++;
 
+
+                int option = random.Next(0, 3);
+                string optionText = "";
+
+                if (option == 0)
+                {
                 
-                position += diceValue;
+                    optionText = "No Play";
+                }
+                else if (option == 1)
+                {
+                
+                    optionText = "Ladder";
+                    position += diceValue;
+                }
+                else
+                {
+                
+                    optionText = "Snake";
+                    position -= diceValue;
+                }
 
                 
                 if (position == 4)
-                    position = 14;
+                    position = 14; 
                 else if (position == 9)
-                    position = 31;
+                    position = 31; 
                 else if (position == 17)
                     position = 7; 
                 else if (position == 20)
@@ -63,13 +82,10 @@ namespace SnakeAndLadderGame
                 if (position > 100)
                     position -= diceValue;
 
-                Console.WriteLine("You rolled a {0}. Your current position is {1}.", diceValue, position);
+                Console.WriteLine("You rolled a {0}. Your current position is {1}. Option: {2}", diceValue, position, optionText);
             }
-
             Console.WriteLine("Congratulations! You reached 100 in {0} dice rolls.", diceRolls);
             Console.ReadLine();
         }
     }
-
-
 }
