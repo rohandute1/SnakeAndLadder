@@ -21,50 +21,50 @@ namespace SnakeAndLadderGame
                 Console.WriteLine("Press any key to roll the dice...");
                 Console.ReadKey();
 
-                // Roll the dice
-                int diceValue = random.Next(1, 7); // Generate a random number between 1 and 6
+                
+                int diceValue = random.Next(1, 7);
                 diceRolls++;
 
-                // Move the player
+
                 position += diceValue;
 
-                // Check if the position is a snake, ladder, or beyond 100
-                if (position == 4)
-                    position = 14; // Snake
-                else if (position == 9)
-                    position = 31; // Ladder
-                else if (position == 17)
-                    position = 7; // Snake
-                else if (position == 20)
-                    position = 38; // Ladder
-                else if (position == 28)
-                    position = 84; // Ladder
-                else if (position == 40)
-                    position = 59; // Ladder
-                else if (position == 51)
-                    position = 67; // Ladder
-                else if (position == 54)
-                    position = 34; // Snake
-                else if (position == 62)
-                    position = 19; // Snake
-                else if (position == 63)
-                    position = 81; // Ladder
-                else if (position == 64)
-                    position = 60; // Snake
-                else if (position == 71)
-                    position = 91; // Ladder
-                else if (position == 87)
-                    position = 24; // Snake
-                else if (position == 93)
-                    position = 73; // Snake
-                else if (position == 95)
-                    position = 75; // Snake
-                else if (position == 99)
-                    position = 78; // Snake
 
-                // Make sure the position doesn't go beyond 100
-                if (position > 100)
-                    position -= diceValue;
+                if (position == 4)
+                    position = 14;
+                else if (position == 9)
+                    position = 31;
+                else if (position == 17)
+                    position = 7; 
+                else if (position == 20)
+                    position = 38;
+                else if (position == 28)
+                    position = 84;
+                else if (position == 40)
+                    position = 59;
+                else if (position == 51)
+                    position = 67;
+                else if (position == 54)
+                    position = 34;
+                else if (position == 62)
+                    position = 19;
+                else if (position == 63)
+                    position = 81;
+                else if (position == 64)
+                    position = 60;
+                else if (position == 71)
+                    position = 91;
+                else if (position == 87)
+                    position = 24;
+                else if (position == 93)
+                    position = 73;
+                else if (position == 95)
+                    position = 75;
+                else if (position == 99)
+                    position = 78;
+
+                
+                if (position < 0)
+                    position = 0;
 
                 Console.WriteLine("You rolled a {0}. Your current position is {1}.", diceValue, position);
             }
@@ -73,6 +73,7 @@ namespace SnakeAndLadderGame
             Console.ReadLine();
         }
     }
+
 
 
 }
