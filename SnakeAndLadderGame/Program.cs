@@ -21,48 +21,48 @@ namespace SnakeAndLadderGame
                 Console.WriteLine("Press any key to roll the dice...");
                 Console.ReadKey();
 
-                // Roll the dice
-                int diceValue = random.Next(1, 7); // Generate a random number between 1 and 6
+                
+                int diceValue = random.Next(1, 7);
                 diceRolls++;
 
-                // Move the player
+                
                 position += diceValue;
 
-                // Check if the position is a snake, ladder, or beyond 100
+                
                 if (position == 4)
-                    position = 14; // Snake
+                    position = 14;
                 else if (position == 9)
-                    position = 31; // Ladder
+                    position = 31;
                 else if (position == 17)
-                    position = 7; // Snake
+                    position = 7; 
                 else if (position == 20)
-                    position = 38; // Ladder
+                    position = 38;
                 else if (position == 28)
-                    position = 84; // Ladder
+                    position = 84;
                 else if (position == 40)
-                    position = 59; // Ladder
+                    position = 59;
                 else if (position == 51)
-                    position = 67; // Ladder
+                    position = 67;
                 else if (position == 54)
-                    position = 34; // Snake
+                    position = 34;
                 else if (position == 62)
-                    position = 19; // Snake
+                    position = 19;
                 else if (position == 63)
-                    position = 81; // Ladder
+                    position = 81;
                 else if (position == 64)
-                    position = 60; // Snake
+                    position = 60;
                 else if (position == 71)
-                    position = 91; // Ladder
+                    position = 91;
                 else if (position == 87)
-                    position = 24; // Snake
+                    position = 24;
                 else if (position == 93)
-                    position = 73; // Snake
+                    position = 73;
                 else if (position == 95)
-                    position = 75; // Snake
+                    position = 75;
                 else if (position == 99)
-                    position = 78; // Snake
+                    position = 78;
 
-                // Make sure the position doesn't go beyond 100
+                
                 if (position > 100)
                     position -= diceValue;
 
